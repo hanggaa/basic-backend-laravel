@@ -1,0 +1,48 @@
+1. Download composer
+2. Download laravel
+composer create-project --prefer-dist laravel/laravel nama_folder
+3. setting .env
+4. Buat database
+5. Buat table dengan perintah laravel
+php artisan make:migration create_items_table --create=items
+6. setting table di migration
+7. setting appserviceprovider
+use Illuminate\Support\Facades\Schema;
+Schema::defaultStringLength(191);
+8. setting route
+9. Buat controller
+php artisan make:controller nama_controller --resource
+10. Buat view
+11. Isi sementara tuple database
+12. Buat model
+php artisan make:model inventorie
+13. Setting controller (line 10, 11)
+14. Setting view (nomor 10)
+--Create--
+15. Buat view sesuai dengan action form
+16. Setting route sesuai dengan form
+17. Setting controller sesuai method route
+18. Setting aturan fillable model(provider\inventorie)
+--Edit--
+19. Setting route sesuai dengan href (Line 21)
+20. Setting controller sesuai dengan method route
+21. Buat view sesuai sesuai dengan controller
+22. Setting route sesuai dengan form (Line 22)
+23. Setting controller sesuai dengan method route (Line 22)
+--Delete--
+24. Setting route sesuai dengan href (route Line 25)
+25. Setting controller sesuai dengan method route (Controller Line 27)
+
+view > route > controller
+
+Clone your project
+Go to the folder application using cd command on your cmd or terminal
+Run composer install on your cmd or terminal
+Copy .env.example file to .env on the root folder. You can type copy .env.example .env if using command prompt Windows or cp .env.example .env if using terminal, Ubuntu
+Open your .env file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
+By default, the username is root and you can leave the password field empty. (This is for Xampp)
+By default, the username is root and password is also root. (This is for Lamp)
+Run php artisan key:generate
+Run php artisan migrate
+Run php artisan serve
+Go to localhost:8000
